@@ -86,15 +86,15 @@ with st.sidebar:
     st.markdown(f"[{link_text}]({link_url})")
 
     st.header("Dataset")
-    img = Image.open("./Images/healthy_diseased_classification.jpeg")
-    st.image(img)
+    #img = Image.open("./Images/healthy_diseased_classification.jpeg")
+    #st.image(img)
 
     st.header("Drawing Canvas Configurations")
     drawing_mode = "freedraw"
     stroke_width = st.slider("Stroke width: ", 1, 25, 3)
     stroke_color = st.color_picker("Stroke color hex: ")
     bg_color = st.color_picker("Background color hex: ", "#eee")
-    bg_image = st.file_uploader("Background image:", type=["png", "jpg"])
+    #bg_image = st.file_uploader("Background image:", type=["png", "jpg"])
     realtime_update = st.checkbox("Update in realtime", True)
 
 # Create canvas component
@@ -106,7 +106,7 @@ canvas_image = st_canvas(
     background_color=bg_color,
     width=canvas_size,
     height=canvas_size,
-    background_image=Image.open(bg_image) if bg_image else None,
+    #background_image=Image.open(bg_image) if bg_image else None,
     update_streamlit=realtime_update,
     drawing_mode=drawing_mode,
     key="canvas",
