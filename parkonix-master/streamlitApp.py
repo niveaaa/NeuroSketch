@@ -77,8 +77,8 @@ st.warning("Warning: Do not click Submit Sketch button before drawing spiral on 
 
 # Sidebar configurations
 with st.sidebar:
-    img = Image.open("./Images/parkinson_disease_detection.jpg")
-    st.image(img)
+    #img = Image.open("./Images/parkinson_disease_detection.jpg")
+    #st.image(img)
     st.subheader("About NeuroSketch")
     link_text = "Distinguishing Different Stages of Parkinson’s Disease Using Composite Index of Speed and Pen-Pressure of Sketching a Spiral"
     link_url = "https://www.frontiersin.org/articles/10.3389/fneur.2017.00435/full"
