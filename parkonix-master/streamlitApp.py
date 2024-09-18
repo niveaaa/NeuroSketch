@@ -23,7 +23,7 @@ def generate_user_input_filename():
 
 # Function to predict Parkinson's disease
 def predict_parkinsons(img_path):
-    best_model = load_model("./keras_model.h5", compile=False)
+    best_model = load_model("keras_model.h5", compile=False)
 
     # Load the labels
     class_names = open("labels.txt", "r").readlines()
