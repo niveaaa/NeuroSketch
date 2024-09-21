@@ -9,6 +9,10 @@ import pandas as pd
 from streamlit_drawable_canvas import st_canvas
 import uuid
 
+import subprocess
+if not os.path.isfile('model.h5'):
+    subprocess.run(['curl --output model.h5 "https://media.githubusercontent.com/media/niveaaa/NeuroSketch/main/keras_model.h5"'], shell=True)
+
 # Disable scientific notation for clarity
 np.set_printoptions(suppress=True)
 
@@ -23,7 +27,7 @@ def generate_user_input_filename():
 
 # Function to predict Parkinson's disease
 def predict_parkinsons(img_path):
-    best_model = load_model("keras_model.h5", compile=False)
+    best_model = load_model("model.h5", compile=False)
 
     # Load the labels
     class_names = open("labels.txt", "r").readlines()
