@@ -1,10 +1,11 @@
 import streamlit as st
 import os
-import tensorflow.keras as keras
-from tensorflow.keras.models import load_model
+os.environ["TF_USE_LEGACY_KERAS"] = "1"
+import tf_keras as keras
+from tf_keras.models import load_model
 from PIL import Image, ImageOps
 import numpy as np
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from tf_keras.preprocessing.image import load_img, img_to_array
 import pandas as pd
 from streamlit_drawable_canvas import st_canvas
 import uuid
